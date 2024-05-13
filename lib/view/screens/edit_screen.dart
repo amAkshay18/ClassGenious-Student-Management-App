@@ -2,8 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:students_data/controllers/db_functions.dart';
 import 'package:students_data/models/model.dart';
-import '../functions/db_functions.dart';
 
 // ignore: must_be_immutable
 class EditScreen extends StatelessWidget {
@@ -27,16 +27,12 @@ class EditScreen extends StatelessWidget {
   final myStudent = Get.put(StudentController());
   File? selectedimage;
 
-  // ignore: non_constant_identifier_names
   final student_nameEdit = TextEditingController();
 
-// ignore: non_constant_identifier_names
   final student_ageEdit = TextEditingController();
 
-// ignore: non_constant_identifier_names
   final student_subjectEdit = TextEditingController();
 
-// ignore: non_constant_identifier_names
   final student_phoneNumberEdit = TextEditingController();
   final studentController = Get.put(
     StudentController(),

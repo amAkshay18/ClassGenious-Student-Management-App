@@ -2,21 +2,17 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:students_data/controllers/db_functions.dart';
 import 'package:students_data/models/model.dart';
-import 'package:students_data/screens/home_screen.dart';
-import '../functions/db_functions.dart';
+import 'package:students_data/view/screens/home_screen.dart';
 
 // ignore: camel_case_types, must_be_immutable
 class ScreenAddStudent extends StatelessWidget {
   ScreenAddStudent({super.key});
   String selectedimage = "";
-  // ignore: non_constant_identifier_names
   final student_name = TextEditingController();
-// ignore: non_constant_identifier_names
   final student_age = TextEditingController();
-// ignore: non_constant_identifier_names
   final student_subject = TextEditingController();
-// ignore: non_constant_identifier_names
   final student_phoneNumber = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   final studentController = Get.put(

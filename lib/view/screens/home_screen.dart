@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:students_data/controllers/db_functions.dart';
 import 'package:students_data/models/model.dart';
-import 'package:students_data/screens/add_student.dart';
-import 'package:students_data/screens/details_screen.dart';
-import 'package:students_data/screens/edit_screen.dart';
-import 'package:students_data/screens/search_screen.dart';
-import '../functions/db_functions.dart';
+import 'package:students_data/view/screens/add_student.dart';
+import 'package:students_data/view/screens/details_screen.dart';
+import 'package:students_data/view/screens/edit_screen.dart';
+import 'package:students_data/view/screens/search_screen.dart';
 
 // ignore: must_be_immutable
 class ScreenHome extends StatelessWidget {
@@ -49,7 +49,7 @@ class ScreenHome extends StatelessWidget {
                 onTap: () {
                   Get.to(
                     () => ScreenDetails(
-                        imagePath: data.imgpath,    
+                        imagePath: data.imgpath,
                         name: data.name,
                         age: data.age,
                         subject: data.subject,
@@ -59,7 +59,7 @@ class ScreenHome extends StatelessWidget {
                 leading: CircleAvatar(
                   radius: 50,
                   backgroundColor: Colors.transparent,
-                  child: ClipOval(  
+                  child: ClipOval(
                     child: SizedBox(
                       width: 58,
                       height: 100,

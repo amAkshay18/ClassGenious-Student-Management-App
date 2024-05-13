@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../functions/db_functions.dart';
+import 'package:students_data/controllers/db_functions.dart';
 import 'details_screen.dart';
 import 'edit_screen.dart';
 
